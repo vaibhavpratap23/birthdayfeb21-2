@@ -20,8 +20,6 @@ body {
   transform: rotateZ(-5deg);
   box-shadow: 1px 15px 20px 0px rgba(0,0,0,0.5);
   position: absolute;
-  width: 300px; /* Base width for desktop */
-  height: auto; /* Height will adjust based on content */
 }
 
 .paper.heart {
@@ -36,12 +34,14 @@ body {
   padding: 10px;
 }
 .paper.image p {
-  font-size: 30px;
+  font-size: 40px; /* Increased font size */
 }
 
 img {
-  max-height: 200px;
-  width: 100%;
+  max-height: 300px; /* Adjust this value as needed */
+  width: auto; /* Maintain aspect ratio */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image fits within the container */
   user-select: none;
 }
 
@@ -61,25 +61,9 @@ img {
 
 p {
   font-family: 'Zeyada';
-  font-size: 50px;
+  font-size: 60px; /* Increased font size */
   color: rgb(0,0,100);
   opacity: 0.75;
   user-select: none;
   filter: drop-shadow(2px 1.5px 1px rgba(0,0,105,0.9));
-}
-
-/* Media query for mobile devices */
-@media only screen and (max-width: 600px) {
-  .paper {
-    width: 80%; /* Increase width for mobile */
-    padding: 20px 50px; /* Adjust padding for mobile */
-  }
-
-  .paper.image p {
-    font-size: 25px; /* Adjust font size for mobile */
-  }
-
-  p {
-    font-size: 40px; /* Adjust font size for mobile */
-  }
 }
